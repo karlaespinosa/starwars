@@ -1,0 +1,24 @@
+.Home {
+    padding: 15px 0;
+}
+
+.Home-link-container{
+    width: 100%;
+}
+
+.Home-link, .Home-title-sec {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.Home-link:hover {
+    text-decoration: none;
+    color: #F4BC1C;
+}
+
+.Home-title-sec {
+    text-align: left;
+    color: #F4BC1C;
+}

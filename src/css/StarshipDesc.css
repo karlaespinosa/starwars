@@ -1,0 +1,15 @@
+.StarshipDesc {
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.StarshipDesc-center {
+    margin: 0 auto;
+}
+
+.StarshipDes-btn {
+    padding: 5px 15px !important;
+    border-radius: 7px !important;
+}

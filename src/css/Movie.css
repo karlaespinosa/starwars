@@ -1,0 +1,30 @@
+.Movie-card {
+    margin-bottom: 25px;
+    transition: box-shadow 0.1s linear, transform 0.15s ease-out;
+}
+
+.Movie-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 17px 2px rgba(0,0,0,0.14), 0 5px 22px 4px rgba(0,0,0,0.12), 0 7px 8px -4px rgba(0,0,0,0.20);
+}
+
+.card-title{
+    color: #106AE0;
+}
+
+.Movie-link {
+    text-decoration: none;
+    color: #fff;
+    background-color: #106AE0;
+    padding: 5px 22px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.Movie-link:link, .Movie-link:hover, .Movie-link:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: rgb(5, 111, 250);
+}
+ 

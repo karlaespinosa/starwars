@@ -1,0 +1,17 @@
+.StarshipList {
+    padding: 25px 0;
+}
+
+.StarshipList-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+}
+
+.StarshipList-desc {
+    color: #6c757d;
+    text-align: center;
+    margin: 0;
+    padding: 25px 0;
+}
