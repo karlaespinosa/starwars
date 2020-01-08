@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Starship from './Starship';
+import TitleSec from './TitleSec';
 import './css/StarshipList.css';
 
 class StarshipList extends Component {
@@ -14,6 +15,7 @@ class StarshipList extends Component {
         return (
             <section className='StarshipList'>
                 <div className='container'>
+                    <TitleSec title='Starship List'/>
                     <div className='row'>
                         <div className='col'>
                             <h2 className='StarshipList-title'>{this.props.location.name}</h2>

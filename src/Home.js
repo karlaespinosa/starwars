@@ -8,13 +8,13 @@ class Home extends Component {
             <div className='Home'>
                 <div className='container'>
                     <div className='row justify-content-start'>
-                        <div className='col-12 col-sm-4 col-lg-4'>
-                            <div className='Home-link-container'>
-                                <Link to='/' className='Home-link'>HOME</Link>
+                        <div className='col-12'>
+                            <div className='Home-link-container'>                              
+                                <ul>
+                                    <li className='Home-item'><Link to='/' className='Home-link'>HOME</Link></li>
+                                    <li className='Home-item'><Link to='/mystarships' className='Home-link'>MY STARSHIPS</Link></li>
+                                </ul>
                             </div>
-                        </div>
-                        <div className='col-12 col-sm-6 col-lg-6'>
-                            <div><h3 className='Home-title-sec'>GEORGE LUCAS' MOVIES</h3></div>
                         </div>
                     </div>
                 </div>

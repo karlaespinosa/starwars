@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import TitleSec from './TitleSec';
 import './css/StarshipDesc.css';
 
 class StarshipDesc extends Component {
@@ -7,12 +8,10 @@ class StarshipDesc extends Component {
         super(props);
         this.state = {
             desc: this.props.location.state, 
-            updatedData: [],
             isEditing: false, 
             starshipClass: this.props.location.state.starship_class,
             length: this.props.location.state.length,
-            passengers: this.props.location.state.passengers,
-            id: ''
+            passengers: this.props.location.state.passengers
         }
         this.toggleForm = this.toggleForm.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -34,24 +33,11 @@ class StarshipDesc extends Component {
             passengers: this.state.passengers
         }
 
-        axios.post('http://localhost:5000/starships/add', starshipDesc)
+        axios.post('/starships/add', starshipDesc)
             .then(response => console.log(response.data));
 
-        const info = {
-            starship_class: this.state.starshipClass, 
-            length: this.state.length, 
-            passengers: this.state.passengers
-        }
-        this.setState({desc: {...this.state.desc, ...info}, isEditing: false});
-    }
-
-    componentDidMount() {
-        axios.get('http://localhost:5000/starships/').then(response => {
-            const data = response.data;
-            this.setState({updatedData: data});
-            console.log(this.state.updatedData);
-        })
-        .catch(err => console.log(err));
+        this.setState({isEditing: false});
+        this.props.history.push('/mystarships');
     }
 
     render() {
@@ -60,6 +46,7 @@ class StarshipDesc extends Component {
                 results = (
                     <section className='StarshipDesc'>
                         <div className='container'>
+                            <TitleSec title={this.state.desc.name}/>
                             <div className='row'>
                                 <div className='col-12 col-sm-12 col-lg-6 StarshipDesc-center'>
                                     <div className="card">
@@ -92,6 +79,7 @@ class StarshipDesc extends Component {
                 results = (
                     <section className='StarshipDesc'>
                         <div className='container'>
+                            <TitleSec title={this.state.desc.name}/>
                             <div className='row'>
                                 <div className='col-12 col-sm-12 col-lg-6 StarshipDesc-center'>
                                     <div className="card">

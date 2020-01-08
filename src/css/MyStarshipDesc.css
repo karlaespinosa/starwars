@@ -1,0 +1,12 @@
+.MyStarshipDesc-card {
+    margin-bottom: 25px;
+}
+
+.MyStarshipDesc-paragraph {
+    margin: 0 0 10px 0;
+}
+
+.MyStarship-button {
+    padding: 5px 15px !important;
+    border-radius: 7px !important;
+}
