@@ -33,7 +33,7 @@ class StarshipDesc extends Component {
             passengers: this.state.passengers
         }
 
-        axios.post('/starships/add', starshipDesc)
+        axios.post('http://localhost:5000/starships/add', starshipDesc)
             .then(response => console.log(response.data));
 
         this.setState({isEditing: false});

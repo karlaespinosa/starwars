@@ -11,7 +11,7 @@ class MyStarships extends Component {
     }
 
     deleteCreatedShip(id) {
-        axios.delete(`/starships/${id}`)
+        axios.delete(`http://localhost:5000/starships/${id}`)
         .then(res => console.log(res.data));
         this.setState(st => ({
             shipsCreated: st.shipsCreated.filter(ship => ship._id !== id)
@@ -19,7 +19,7 @@ class MyStarships extends Component {
     }
 
     componentDidMount() {
-        axios.get('/starships/').then(response => {
+        axios.get('http://localhost:5000/starships/').then(response => {
             const data = response.data;
             this.setState({shipsCreated: data});
         })
