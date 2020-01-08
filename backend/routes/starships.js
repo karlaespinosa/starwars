@@ -32,6 +32,12 @@ router.route('/:id').get((req,res) => {
     .catch(err => res.status(400).json(`Error: ${err}`));
 });
 
+router.route('/:id').delete((req, res) => {
+    Starship.findByIdAndDelete(req.params.id)
+    .then(() => res.json('Starship deleted'))
+    .catch(err => res.status(400).json(`Error: ${err}`))
+});
+
 router.route('/update/:id').get((req,res) => {
     Starship.findById(req.params.id)
     .then(starship => {
